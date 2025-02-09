@@ -1,3 +1,7 @@
+const fs = require('fs');
+const mysql = require('mysql2');
+const conf = JSON.parse(fs.readFileSync('conf.json'));
+const connection = mysql.createConnection(conf);
 const express = require("express");
 const app = express();
 let http = require("http");
